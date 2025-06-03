@@ -1,67 +1,129 @@
-/* css styles */
+/* Import Google Fonts: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Color Variables */
 :root {
   --inspire1: #ff6f4b;  /* Coral-orange */
   --inspire2: #fd4c55;  /* Bright coral-red */
   --inspire3: #e13661;  /* Raspberry pink */
   --inspire4: #c1246b;  /* Magenta-pink */
   --inspire5: #a11477;  /* Deep fuchsia */
+  --background: #f9f9f9; /* Light background for contrast */
+  --text: #333; /* Dark text for readability */
 }
 
-/* Optional: set body font and text color */
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
+  padding-top: 70px; /* Space for fixed navbar */
+}
+
+/* Typography */
+h1 {
+  color: var(--inspire4);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--inspire3);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+h3 {
+  color: var(--inspire1);
+  font-size: 1.5rem;
+}
+
+/* Text Colors */
 .white-text {
   color: white;
 }
+
 .black-text {
   color: black;
 }
+
 .red-text {
   color: red;
 }
 
-
-/* Boostrap navbar custom colors */
+/* Navbar */
 .navbar {
   background-color: var(--inspire5);
-  height: 60px; 
+  height: 60px;
 }
 
 .navbar-brand, .navbar-nav .nav-link {
-  color: #fff !important;
+  color: white !important;
+  font-weight: 400;
 }
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 50px; /* Adjusted for better proportion */
+  width: auto;
+}
+
 .navbar-nav {
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
-.navbar-brand {
-    display: flex;
-    position: absolute;   
+
+/* Hero Section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.navbar-brand img { 
-  max-height: 100px;
-  width: auto;
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
-/*BUTTONS*/
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
 
+/* Buttons */
 .btn-primary {
   background-color: var(--inspire1);
   border-color: var(--inspire1);
   padding: 10px;
-        border-radius: 10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        margin:10px
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
   background-color: var(--inspire2);
   border-color: var(--inspire2);
+  color: white;
 }
 
-/* CSS */
 .btn-new {
   background-color: var(--inspire1);
   border: solid transparent;
@@ -71,12 +133,12 @@
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: din-round,sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
-  margin: 0;
+  margin: 10px;
   outline: none;
   overflow: visible;
   padding: 13px 16px;
@@ -84,14 +146,12 @@
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: all 0.2s ease;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  width: 100%;
 }
-
 
 .btn-new:after {
   background-clip: padding-box;
@@ -112,7 +172,6 @@
   background-color: var(--inspire5);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
- 
 }
 
 .btn-new:active {
@@ -122,15 +181,53 @@
   transform: translateY(0);
 }
 
-/* Stylish headings */
-h1{
-  color: var(--inspire4);
+/* Card Styles (for Team Page) */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
 }
 
-h2{
-  color :var(--inspire3);
+.card-img-top {
+  border-radius: 8px 8px 0 0;
 }
 
-h3{
-  color: var(--inspire1);
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--inspire5);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .navbar-nav {
+    justify-content: flex-start;
+  }
 }

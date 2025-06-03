@@ -5,13 +5,25 @@ format:
 editor: source
 ---
 ```{=html}
+  
 <style>
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
   body {
-  background-image: url("bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-color: white;
-}
+    background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   
 </style>
 ```
